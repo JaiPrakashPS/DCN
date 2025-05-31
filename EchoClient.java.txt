@@ -1,0 +1,52 @@
+EchoClient.java
+
+package saava;
+
+import java.io.IOException;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+public class EchoClient {
+	public static void main(String[] args) {
+		try {
+			System.out.println("Client started");
+			Socket soc = new Socket("localhost",9806);
+		} catch (UnknownHostException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}
+
+
+EchoServer.js
+
+package saava;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class EchoServer {
+	
+	public static void main(String[] args) {
+		
+	try {
+		
+		System.out.println("Waiting for clients");
+		ServerSocket ss = new ServerSocket(9806);
+		Socket soc = ss.accept();
+		System.out.println("Connection established");
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+	
+	
+	}
+}
