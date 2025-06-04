@@ -1,6 +1,6 @@
 EchoClient.java
 
-package saava;
+package your_package_name;
 
 import java.io.IOException;
 import java.net.Socket;
@@ -25,7 +25,7 @@ public class EchoClient {
 
 EchoServer.js
 
-package saava;
+package your_package_name;
 
 import java.io.IOException;
 import java.net.ServerSocket;
